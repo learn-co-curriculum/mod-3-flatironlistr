@@ -1,6 +1,7 @@
 class TasksController < ApplicationController
   def index
-    @tasks = Task.all
+    @list = List.find(params[:list_id])
+    @tasks = @list.tasks
     render json: @tasks
   end
 
@@ -12,9 +13,15 @@ class TasksController < ApplicationController
 
 
   def create
+    @user = User.find(params[:user_id])
     @list = List.find(params[:list_id])
-    @task = Task.create(description:params[:description], priority: params[:description], list: @list)
-    render json: @task
+    if @user == @list.user
+
+      @task = Task.create(description:params[:description], priority: params[:priority], list: @list)
+      render json: @task
+    else
+      render json: { message: "Error"}
+    end
   end
 
 end

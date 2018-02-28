@@ -1,3 +1,54 @@
+
+## API DOCUMENTATION
+
+### API Endpoint
+
+`https://flatiron-tasklistr.herokuapp.com`
+###  Create new List
+
+`POST /lists`
+
+```
+{
+  user_id: 1,
+  title: "House Chores"
+}
+
+```
+
+### Create new Task
+
+`POST /lists/:list_id/tasks`
+
+Creating a task at list_id 1 for example will search for the list at id 1 and create an associated task
+
+Note you must pass your user_id with your request. If you are not associated with that list it will give you an error.
+
+
+```
+  {
+    user_id: 1,
+    description: "Walk Cat",
+    priority: 5
+  }
+```
+
+### Delete Lists
+
+`DELETE /lists/:list_id`
+
+```
+  {
+    user_id: 1
+  }
+```
+
+
+Deleting a list will delete all of its todos.
+
+
+
+## USER IDS
 1. Fei
 2. Fara
 3. Torre

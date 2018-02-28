@@ -16,4 +16,16 @@ class ListsController < ApplicationController
     render json: @list
   end
 
+  def destroy
+    @user = User.find(params[:user_id])
+    @list = List.find(params[:id])
+    if @user == @list.user
+
+      @list.destroy
+      render json: { message: "Success"}
+    else
+    end
+
+  end
+
 end
