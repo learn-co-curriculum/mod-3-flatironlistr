@@ -4,6 +4,14 @@
 ### API Endpoint
 
 `https://flatiron-tasklistr.herokuapp.com`
+
+
+### Get your list 
+`GET /lists?user_id=1`
+
+This will provide you with your lists. If you do not add the `user_id` parameter you will get all lists
+
+
 ###  Create new List
 
 `POST /lists`
