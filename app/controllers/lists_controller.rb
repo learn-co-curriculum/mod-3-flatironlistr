@@ -1,7 +1,12 @@
 class ListsController < ApplicationController
 
   def index
-    @lists = List.all
+    if params[:user_id]
+      @user = User.find(params[:user_id])
+      @lists = @user.lists
+    else
+      @lists = List.all
+    end
     render json: @lists
   end
 
