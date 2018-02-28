@@ -1,24 +1,19 @@
-# README
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+1. Fei
+2. Fara
+3. Torre
+4. Travis
+5. Kristina
+6. Matt
+7. Morganne
+8. Katy
+9. Josh D
+10. Cristy
+11. Declan
+12. osama
+13. Vic
+14. Alex G
+15. Alex K
+16. Jonathan
+17. Anna
+18. Josh D
+19. Tania
